@@ -2,8 +2,8 @@ import React from 'react';
 import Header from "./Components/Header/Header";
 import styled, {ThemeProvider} from "styled-components";
 import Main from "./Components/Main/Main";
-import store from "./redux/store";
 import {useTypedSelector} from "./redux/reduxTypedHooks";
+
 
 const Container = styled.div`
   max-width: 1200px;
@@ -13,6 +13,7 @@ const Container = styled.div`
 const Wrapper = styled.div`
   width: 100%;
   height: 100%;
+transition:0.5s all;
   background: ${({theme}) =>  theme.background.bg};
 `
 
