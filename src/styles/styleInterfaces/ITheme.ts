@@ -15,4 +15,9 @@ export interface ITheme {
     background: {
         bg: string
     },
+
+    logo: {
+        big: string,
+        small: string
+    }
 }

@@ -4,6 +4,8 @@ import Logo from "../Logo/Logo";
 import Title from "../Title/Title";
 import ToggleSwitch from "../../UI/ToggleSwitch/ToggleSwitch";
 import useAction from "../../Hooks/useAction";
+import {useTypedSelector} from "../../redux/reduxTypedHooks";
+import {typeOfCar} from "../../styles/styleInterfaces/ITheme";
 
 interface TypeProps {
     background?: string;
@@ -27,11 +29,12 @@ const StyledHeader  = styled.header<{ background?: string, padding?: string }>`
 
 const Header = (props: TypeProps) => {
     const {setCar} = useAction();
+    const carType = useTypedSelector(state => state.chosenCar.car.type)
     return (
         <StyledHeader background={props.background} padding={props.padding}>
             <div>
                 <Logo />
-                <Title mediaTablet={`font-size: 5vw `} mediaPhone={`font-size: 7vw`} padding="0 10px 0 0" fontFamily='Smooch, cursive'  >Driving pleasure</Title>
+                <Title mediaTablet={`font-size: 5vw `} mediaPhone={`font-size: 7vw`} padding="0 10px 0 0" fontFamily='Smooch, cursive'  >{carType === typeOfCar.bmw ? "Driving pleasure" : "Superfect"  }</Title>
                 <ToggleSwitch action={setCar}/>
             </div>
         </StyledHeader>

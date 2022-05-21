@@ -22,7 +22,7 @@ const StyledLogo = styled.img<typedProps>`
 `
 
 const Logo = (props: typedProps) => {
-    const logoSrc = useTypedSelector(state => state.chosenCar.car.logo.src);
+    const logoSrc = useTypedSelector(state => state.chosenCar.car.logo.big);
     return (
         <div>
           <StyledLogo src={logoSrc} {...props}/>

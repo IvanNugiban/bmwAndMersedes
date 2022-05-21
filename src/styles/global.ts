@@ -32,6 +32,7 @@ export default createGlobalStyle`
 
   ;
   body {
+    overflow: hidden;
     line-height: 1;
   }
 
@@ -57,6 +58,8 @@ export default createGlobalStyle`
     border-collapse: collapse;
     border-spacing: 0;
   }
-
+a {
+  text-decoration: none;
+}
   ;
 `

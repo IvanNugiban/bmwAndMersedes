@@ -1,9 +1,13 @@
 import React from 'react';
 import cl from './ReadMoreBtn.module.css';
 
-const ReadMoreBtn = () => {
+type THref = {
+    href: string
+};
+
+const ReadMoreBtn = ({href} : THref) => {
     return (
-        <a href="#" className={cl.link}>
+        <a href={href} className={cl.link}>
   <span className={cl.mask}>
     <div className={cl.link_container}>
       <span className={`${cl.link_title1} ${cl.title}`}>READ MORE</span>
