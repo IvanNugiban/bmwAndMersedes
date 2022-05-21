@@ -1,19 +1,21 @@
-import {createSlice, PayloadAction} from "@reduxjs/toolkit";
+import {createSlice} from "@reduxjs/toolkit";
+import {bmwTheme, mercedesTheme} from "../../styles/theme";
+import {ITheme} from "../../styles/styleInterfaces/ITheme";
 
-interface ICarState {
-    car: string
+const initialState = {
+    car: bmwTheme,
 }
 
-const initialState: ICarState = {
-    car: "BMW"
+function deepEqual(obj1 : ITheme,obj2 : ITheme)  {
+    return JSON.stringify(obj1)===JSON.stringify(obj2);
 }
 
 const carSlice = createSlice({
         name: "carSlice",
         initialState,
         reducers: {
-            setCar: (state, action: PayloadAction<string>) => {
-            state.car = action.payload;
+            setCar: (state) => {
+          state.car = deepEqual(state.car, bmwTheme) ? mercedesTheme : bmwTheme;
             }
         }
     }

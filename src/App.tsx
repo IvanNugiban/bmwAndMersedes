@@ -1,7 +1,9 @@
 import React from 'react';
 import Header from "./Components/Header/Header";
-import styled from "styled-components";
+import styled, {ThemeProvider} from "styled-components";
 import Main from "./Components/Main/Main";
+import store from "./redux/store";
+import {useTypedSelector} from "./redux/reduxTypedHooks";
 
 const Container = styled.div`
   max-width: 1200px;
@@ -11,21 +13,20 @@ const Container = styled.div`
 const Wrapper = styled.div`
   width: 100%;
   height: 100%;
+  background: ${({theme}) =>  theme.background.bg};
 `
 
-enum photosSrc {
-    bmwLogo = "https://www.bmw.in/etc.clientlibs/ds2-webcomponents/clientlibs/clientlib/resources/img/BMW_White_Logo.svg",
-    bmwBackground = "https://www.bmw.in/content/dam/bmw/marketIN/bmw_in/all-models/5-series/2020/highlight1.jpg/jcr:content/renditions/cq5dam.resized.img.1680.large.time1641295515778.jpg"
-}
-
 function App() {
+    const theme = useTypedSelector(state => state.chosenCar.car)
     return (
+        <ThemeProvider theme={theme}>
         <Wrapper>
             <Container>
-                <Header padding="4px 100px 4px 10px" src={photosSrc.bmwLogo}/>
+                <Header padding="4px 10px 4px 10px" />
                 <Main/>
             </Container>
         </Wrapper>
+        </ThemeProvider>
     );
 }
 

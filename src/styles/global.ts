@@ -33,9 +33,6 @@ export default createGlobalStyle`
   ;
   body {
     line-height: 1;
-    background: url("https://www.bmw.in/content/dam/bmw/marketIN/bmw_in/all-models/5-series/2020/highlight1.jpg/jcr:content/renditions/cq5dam.resized.img.1680.large.time1641295515778.jpg") center fixed no-repeat;
-    background-size: cover;
-    color: white;
   }
 
   ;
