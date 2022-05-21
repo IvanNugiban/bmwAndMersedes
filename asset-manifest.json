@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/bmwAndMersedes/static/css/main.bb68e742.css",
-    "main.js": "/bmwAndMersedes/static/js/main.5e2bfb2f.js",
+    "main.js": "/bmwAndMersedes/static/js/main.5725430c.js",
     "index.html": "/bmwAndMersedes/index.html",
     "main.bb68e742.css.map": "/bmwAndMersedes/static/css/main.bb68e742.css.map",
-    "main.5e2bfb2f.js.map": "/bmwAndMersedes/static/js/main.5e2bfb2f.js.map"
+    "main.5725430c.js.map": "/bmwAndMersedes/static/js/main.5725430c.js.map"
   },
   "entrypoints": [
     "static/css/main.bb68e742.css",
-    "static/js/main.5e2bfb2f.js"
+    "static/js/main.5725430c.js"
   ]
 }
