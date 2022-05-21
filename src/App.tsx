@@ -20,7 +20,6 @@ transition:0.5s all;
 function App() {
     const theme = useTypedSelector(state => state.chosenCar.car)
     return (
-        <HashRouter basename="/">
         <ThemeProvider theme={theme}>
         <Wrapper>
             <Container>
@@ -29,7 +28,6 @@ function App() {
             </Container>
         </Wrapper>
         </ThemeProvider>
-        </HashRouter>
     );
 }
 

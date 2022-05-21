@@ -8,14 +8,14 @@ import MercedesDescription from "./MercedesDescription/MercedesDescription";
 const StyledMain = styled.main`
   height: 100vh;
   display: flex;
-  padding-left: 35px;
+  padding-left: 10px;
   justify-content: center;
   flex-direction: column;
 
   ${props => props.theme.type === typeOfCar.mercedes && css`
     align-items: flex-end;
     justify-content: flex-start;
-    padding: 100px 20px 0 0;
+    padding: 80px 0px 0 0;
     @media ${props => props.theme.media.tablet} {
       justify-content: center;
       text-align: center;
