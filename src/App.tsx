@@ -3,7 +3,7 @@ import Header from "./Components/Header/Header";
 import styled, {ThemeProvider} from "styled-components";
 import Main from "./Components/Main/Main";
 import {useTypedSelector} from "./redux/reduxTypedHooks";
-
+import {HashRouter} from "react-router-dom";
 
 const Container = styled.div`
   max-width: 1200px;
@@ -20,6 +20,7 @@ transition:0.5s all;
 function App() {
     const theme = useTypedSelector(state => state.chosenCar.car)
     return (
+        <HashRouter basename="/">
         <ThemeProvider theme={theme}>
         <Wrapper>
             <Container>
@@ -28,6 +29,7 @@ function App() {
             </Container>
         </Wrapper>
         </ThemeProvider>
+        </HashRouter>
     );
 }
 
